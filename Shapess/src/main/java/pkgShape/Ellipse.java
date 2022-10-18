@@ -1,6 +1,6 @@
 package pkgShape;
 
-public abstract class Ellipse extends Circle{
+public class Ellipse extends Circle{
 	
 	private double radius2;
 	
@@ -11,7 +11,6 @@ public abstract class Ellipse extends Circle{
 	}
 	
 	public Ellipse() {
-		super();
 	}
 	
 	@Override
@@ -19,19 +18,20 @@ public abstract class Ellipse extends Circle{
 		return Math.PI * this.getRadius() * this.getRadius2();
 	}
 	
+	@Override
 	public double circumference() {
 		double h = (((this.getRadius() - this.getRadius2())*
 				(this.getRadius() - this.getRadius2()))/((this.getRadius() + this.getRadius2()) 
 				* (this.getRadius() + this.getRadius2())));
 		
-		return Math.PI * h * (1+((3*h)/(10+Math.sqrt(4-3*h))));
-	}
-	
-	@Override
-	public double perimeter() {
-		return circumference();
+		return Math.PI * (this.getRadius() + this.getRadius2()) * (1+((3*h)/((10)+Math.sqrt(4-(3*h)))));
 	}
 
+	@Override
+	public double perimeter() {
+		return circumference(); 
+	}
+	
 	public double getRadius2() {
 		return radius2;
 	}

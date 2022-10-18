@@ -1,6 +1,6 @@
 package pkgShape;
 
-public abstract class Ellipsoid extends Ellipse{
+public class Ellipsoid extends Ellipse{
 
 	private double radius3;
 	
@@ -12,7 +12,6 @@ public abstract class Ellipsoid extends Ellipse{
 	}
 	
 	public Ellipsoid() {
-		super();
 	}
 	
 	@Override
@@ -43,7 +42,7 @@ public abstract class Ellipsoid extends Ellipse{
 	}
 
 	public double volume() {
-		return ((4/3) * Math.PI * getRadius() * getRadius2() * getRadius3());
+		return 4*(Math.PI * getRadius() * getRadius2() * getRadius3())/3;
 	}
 	
 	public boolean isSphere() {	
