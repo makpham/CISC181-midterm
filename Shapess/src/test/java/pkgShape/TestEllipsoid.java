@@ -18,21 +18,21 @@ class TestEllipsoid {
 	@Test
 	public void areaTest() {
 		assertThrows(UnsupportedOperationException.class, () ->
-		{ new Ellipsoid();
+		{ new Ellipsoid(2, 3, 4);
 		});
 	}
 	
 	@Test
 	public void perimeterTest() {
 		assertThrows(UnsupportedOperationException.class, () ->
-		{ new Ellipsoid();
+		{ new Ellipsoid(2, 3, 4);
 		});
 	}
 	
 	@Test
 	public void circumeferenceTest() {
 		assertThrows(UnsupportedOperationException.class, () ->
-		{ new Ellipsoid();
+		{ new Ellipsoid(2, 3, 4);
 		});
 	}
 	

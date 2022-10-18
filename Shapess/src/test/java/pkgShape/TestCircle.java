@@ -48,7 +48,7 @@ public class TestCircle {
 	@Test
 	public void illegal_test() {
 		assertThrows(IllegalArgumentException.class, () ->
-		{ new Circle(-2.0);
+		{ new Circle(-5.0);
 		});
 	}
 }
