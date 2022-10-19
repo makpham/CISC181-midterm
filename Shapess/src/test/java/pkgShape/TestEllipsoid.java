@@ -7,6 +7,14 @@ import org.junit.jupiter.api.Test;
 class TestEllipsoid {
 
 	@Test
+	public void isSphereTest() {
+		Ellipsoid e6 = new Ellipsoid(4,4,4);
+		boolean expectedBool = true;
+		
+		assertEquals(expectedBool, e6.isSphere());
+	}
+	
+	@Test
 	public void testGettersSetters() {
 		Ellipsoid e4 = new Ellipsoid(2.0, 5.0, 10.0);
 		
@@ -17,17 +25,17 @@ class TestEllipsoid {
 	
 	@Test
 	public void areaTest() throws UnsupportedOperationException{
-		new Ellipsoid(1,2,3);
+		new Ellipsoid(1.9,2.4,3.2);
 	}
 	
 	@Test
 	public void perimeterTest() throws UnsupportedOperationException{
-		new Ellipsoid(1,2,3);
+		new Ellipsoid(1.4,2.8,3.3);
 	}
 	
 	@Test
 	public void circumferenceTest() throws UnsupportedOperationException{
-		new Ellipsoid(1,2,3);
+		new Ellipsoid(1.9,2.3,1.3);
 	}
 	
 	@Test

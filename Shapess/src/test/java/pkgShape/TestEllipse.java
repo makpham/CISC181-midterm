@@ -7,6 +7,14 @@ import org.junit.jupiter.api.Test;
 class TestEllipse {
 
 	@Test
+	public void isCircleTest() {
+		Ellipse e5 = new Ellipse(4,4);
+		boolean expectedBool = true;
+		
+		assertEquals(expectedBool, e5.isCircle());
+	}
+	
+	@Test
 	public void testGettersSetters() {
 		Ellipse e4 = new Ellipse(10.0, 5.0);
 		
